@@ -134,13 +134,38 @@ Il est cependant plus haut niveau que l'assembleur, et permet d'être indépenda
 
 ---
 
-## Portage
+## Portabilité
 
 Puisque le langage C définit une syntaxe haut niveau pour décrire un programme, il est possible de porter le même programme sur n'importe quelle architecture pour laquelle un compilateur C a été développé.
 
 Il est même possible de porter un programme vers une autre architecture que l'actuelle, en utilisant ce qu'on appelle un *cross-compiler*. P.ex. compiler un programme à destination de Windows depuis un système Linux.
 
 Le compilateur a comme rôle de traduire les instructions C haut niveau vers un langage de plus bas niveau, compréhensible par la machine elle-même.
+
+---
+layout: image
+image: images/Crosscompiler-660x330.png
+---
+
+---
+hideInToc: true
+---
+
+## Portabilité (suite)
+
+But: exécuter un programme sur différentes plates-formes matérielles et systèmes d'exploitation sans nécessiter de modifications substantielles.
+
+- Économie de temps et d'efforts
+- Élargissement de l'audience
+- Maintenabilité facilitée
+
+---
+
+### Problèmes courants
+
+- Taille des données (int, long, etc.)
+- Appels systèmes: varie selon le système d'exploitation
+- Différences de compilation: comportements différents selon le compilateur
 
 ---
 
@@ -245,11 +270,11 @@ Non, car `a` est encore valide dans la scope de `b`.
 
 ---
 
-# Commentaires
+## Commentaires
 
 Les commentaires de fonctions sont essentiels pour expliquer le but et le fonctionnement d'une fonction dans un programme.
 
-## Exemple 1 : Fonction d'addition
+### Exemple 1 : Fonction d'addition
 
 ```c
 /**
@@ -270,7 +295,7 @@ Ce commentaire explique brièvement ce que fait la fonction addition, quelles so
 hideInToc: true
 ---
 
-## Exemple 2 : Fonction de recherche dans un tableau
+### Exemple 2 : Fonction de recherche dans un tableau
 
 ```c
 /**
@@ -297,7 +322,7 @@ Ce commentaire décrit la fonction rechercherElement, ses paramètres, ce qu'ell
 hideInToc: true
 ---
 
-## Exemple 3 : Fonction pour calculer la factorielle
+### Exemple 3 : Fonction pour calculer la factorielle
 
 ```c
 /**
